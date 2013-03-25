@@ -1,0 +1,5 @@
+*~
+*.swp
+lint.xml
+bin/
+gen/

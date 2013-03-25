@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Tic-Tac-Toe</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link rel="stylesheet" href="css/app.css" />
+        <script src="js/msgbus.js"></script>
+        <script src="js/globals.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/app.js"></script>
+    </head>
+
+    <body>
+        <div id="pause-screen" class="screen">
+            <center style="font-size:24pt;">* P * A * U * S * E *</center>
+        </div>
+
+        <div id="start-screen" class="screen">
+            <div id="start-screen-bg"></div>
+
+            <div id="start-screen-body">
+                <span class="title">Tic-Tac-Toe</title>
+                <ul>
+                    <li><button id="btnSelected" class="selected">Play!</button></li>
+                    <li><button id="btnOptions">Options</button></li>
+                    <li><button id="btnCredits">Credits</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div id="game-screen-bg"></div>
+
+            <div id="game-screen-body">
+                <!-- selection marker -->
+                <div id="cell-selector"></div>
+
+                <!-- row 0 -->
+                <div id="cell00" class="cell"></div>
+                <div id="cell01" class="cell"></div>
+                <div id="cell02" class="cell"></div>
+
+                <!-- row 1 -->
+                <div id="cell10" class="cell"></div>
+                <div id="cell11" class="cell"></div>
+                <div id="cell12" class="cell"></div>
+
+                <!-- row 2 -->
+                <div id="cell20" class="cell"></div>
+                <div id="cell21" class="cell"></div>
+                <div id="cell22" class="cell"></div>
+
+                <!-- messages -->
+                <div id="messages"></div>
+            </div>
+        </div>
+
+        <div id="options-screen" class="screen">
+            <div id="options-screen-bg"></div>
+
+            <div id="options-screen-body">
+                <span class="title">Options</span>
+
+                <div id="option-controllers" class="option-container">
+                    <span class="subtitle">Controllers</span>
+                    <span class="option">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="credits-screen" class="screen">
+            <div id="credits-screen-bg"></div>
+
+            <div id="credits-screen-body">
+                <span class="title">Credits</span>
+
+                <div id="credit-graphics" class="credit-container">
+                    <span class="subtitle">Graphics</span>
+                    <span class="credit">Foo</span>
+                </div>
+
+                <div id="credit-audio" class="credit-container">
+                    <span class="subtitle">Audio</span>
+                    <span class="credit">Foo</span>
+                </div>
+
+                <div id="credit-programming" class="credit-container">
+                    <span class="subtitle">Programming</span>
+                    <span class="credit">Foo</span>
+                </div>
+
+                <div id="credit-qc" class="credit-container">
+                    <span class="subtitle">Quality&nbsp;Control</span>
+                    <span class="credit">Foo</span>
+                </div>
+            </div>
+        </div>
+
+<!--
+        <div id="controller1">
+            <label for="c1_lsx">LSX</label><input id="c1_lsx" value="0.00" /><br/>
+            <label for="c1_lsy">LSY</label><input id="c1_lsy" value="0.00" /><br/>
+            <label for="c1_rsx">RSX</label><input id="c1_rsx" value="0.00" /><br/>
+            <label for="c1_rsy">RSY</label><input id="c1_rsy" value="0.00" /><br/>
+            <label for="c1_l2">L2</label><input id="c1_l2" value="0.00" /><br/>
+            <label for="c1_r2">R2</label><input id="c1_r2" value="0.00" /><br/>
+            <label for="c1_o">O</label><input id="c1_o" value="0" /><br/>
+            <label for="c1_u">U</label><input id="c1_u" value="0" /><br/>
+            <label for="c1_y">Y</label><input id="c1_y" value="0" /><br/>
+            <label for="c1_a">A</label><input id="c1_a" value="0" /><br/>
+        </div>
+
+        <div id="controller2">
+            <label for="c2_lsx">LSX</label><input id="c2_lsx" value="0.00" /><br/>
+            <label for="c2_lsy">LSY</label><input id="c2_lsy" value="0.00" /><br/>
+            <label for="c2_rsx">RSX</label><input id="c2_rsx" value="0.00" /><br/>
+            <label for="c2_rsy">RSY</label><input id="c2_rsy" value="0.00" /><br/>
+            <label for="c2_l2">L2</label><input id="c2_l2" value="0.00" /><br/>
+            <label for="c2_r2">R2</label><input id="c2_r2" value="0.00" /><br/>
+            <label for="c2_o">O</label><input id="c2_o" value="0" /><br/>
+            <label for="c2_u">U</label><input id="c2_u" value="0" /><br/>
+            <label for="c2_y">Y</label><input id="c2_y" value="0" /><br/>
+            <label for="c2_a">A</label><input id="c2_a" value="0" /><br/>
+        </div>
+-->
+    </body>
+</html>
